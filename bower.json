@@ -1,0 +1,23 @@
+{
+  "name": "silverstripe-jquery",
+  "description": "Use a newer version (1.11.1) of jQuery outside of the CMS and disable including framework jQuery",
+  "version": "1.11.1",
+  "license": "BSD-3-Clause",
+  "authors": [
+        {
+            "name": "Corey Sewell - Guru Digital Media",
+            "email": "corey@gdmedia.tv"
+        }
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~1.11.1",
+    "jquery-migrate": "~1.2.1"
+  }
+}

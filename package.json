@@ -1,0 +1,26 @@
+{
+  "name": "silverstripe-jquery",
+  "description": "Use a newer version (1.11.1) of jQuery outside of the CMS and disable including framework jQuery",
+  "version": "1.11.1",
+  "license": "BSD-3-Clause",
+  "authors": [
+        {
+            "name": "Corey Sewell - Guru Digital Media",
+            "email": "corey@gdmedia.tv"
+        }
+  ],
+  "repository": "https://github.com/guru-digital/silverstripe-jquery.git",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "bower": "~1.2.8",
+    "grunt": "~0.4.2",
+    "grunt-bower": "^0.16.0",
+    "grunt-bower-install-task": "0.0.2",
+    "grunt-contrib-concat": "^0.5.0",
+    "grunt-contrib-uglify": "^0.6.0",
+    "grunt-update-json": "^0.2.1",
+    "load-grunt-tasks": "^1.0.0"
+  }
+}
