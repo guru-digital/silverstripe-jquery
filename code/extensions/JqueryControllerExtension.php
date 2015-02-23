@@ -21,7 +21,8 @@ class JqueryControllerExtension extends Extension {
         if (!is_subclass_of(Controller::curr(), "LeftAndMain")) {
             $this->backend = Requirements::backend();
             $jsMin         = (Director::isDev()) ? "" : ".min";
-            $toBlock       = array(FRAMEWORK_DIR . "/thirdparty/jquery/jquery.js");
+            $toBlock       = array(FRAMEWORK_DIR . "/thirdparty/jquery/jquery.js",
+                                   FRAMEWORK_DIR . "/thirdparty/jquery/jquery.min.js");
             $toPrepend     = array("silverstripe-jquery/thirdparty/jquery/jquery" . $jsMin . ".js", "silverstripe-jquery/thirdparty/jquery-migrate/jquery-migrate" . $jsMin . ".js");
             $this->mungeRequirementsJs($toBlock, $toPrepend);
         }
