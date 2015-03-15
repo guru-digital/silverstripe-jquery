@@ -37,8 +37,7 @@ module.exports = function (grunt) {
                     sourceMap: true
                 },
                 files: {
-                    'thirdparty/jquery/jquery.min.js': ['thirdparty/jquery/jquery.js'],
-                    'thirdparty/jquery-migrate/jquery-migrate.min.js': ['thirdparty/jquery-migrate/jquery-migrate.js']
+                    'thirdparty/jquery/jquery.min.js': ['thirdparty/jquery/jquery.js']
                 }
             }
         }
