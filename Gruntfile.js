@@ -67,5 +67,5 @@ module.exports = function (grunt) {
 			}
 		},
 	});
-	grunt.registerTask("default", ["bower_install", "bower", "concat", "uglify"]);
+	grunt.registerTask("default", ["bower_install", "bower", "uglify"]);
 };
