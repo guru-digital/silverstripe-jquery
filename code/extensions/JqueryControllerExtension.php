@@ -3,7 +3,8 @@
 /**
  *
  */
-class JqueryControllerExtension extends Extension {
+class JqueryControllerExtension extends Extension
+{
 
     /**
      *
@@ -17,7 +18,8 @@ class JqueryControllerExtension extends Extension {
      */
     protected $backend;
 
-    public function onBeforeInit() {
+    public function onBeforeInit()
+    {
         if (!is_subclass_of(Controller::curr(), "LeftAndMain")) {
             $this->backend = Requirements::backend();
             $jsMin         = (Director::isDev()) ? "" : ".min";
@@ -28,7 +30,8 @@ class JqueryControllerExtension extends Extension {
         }
     }
 
-    protected function mungeRequirementsJs($toBlock, $toPrepend) {
+    protected function mungeRequirementsJs($toBlock, $toPrepend)
+    {
         foreach ($toBlock as $block) {
             Requirements::block($block);
         }
@@ -43,7 +46,8 @@ class JqueryControllerExtension extends Extension {
      *
      * @return ReflectionProperty
      */
-    protected function getRequirementsJSProp() {
+    protected function getRequirementsJSProp()
+    {
         if (!$this->requirementsJSProp) {
             $class                    = new ReflectionClass($this->backend);
             $this->requirementsJSProp = $class->getProperty("javascript");
@@ -56,7 +60,8 @@ class JqueryControllerExtension extends Extension {
      *
      * @return ReflectionProperty
      */
-    protected function getRequirementsJS() {
+    protected function getRequirementsJS()
+    {
         return $this->getRequirementsJSProp()->getValue($this->backend);
     }
 
@@ -64,8 +69,8 @@ class JqueryControllerExtension extends Extension {
      *
      * @return ReflectionProperty
      */
-    protected function setRequirementsJS($requirementsJs) {
+    protected function setRequirementsJS($requirementsJs)
+    {
         return $this->getRequirementsJSProp()->setValue($this->backend, $requirementsJs);
     }
-
 }
