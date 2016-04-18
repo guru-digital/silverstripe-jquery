@@ -1,8 +1,7 @@
 {
   "name": "silverstripe-jquery",
-  "description": "Use a newer version (1.12.0) of jQuery outside of the CMS and disable including framework jQuery",
-  "version": "1.12.0",
-  "license": "BSD-3-Clause",
+  "description": "Use a newer version (1.12.3) of jQuery outside of the CMS and disable including framework jQuery",
+   "license": "BSD-3-Clause",
   "homepage": "https://git2.gdmedia.tv/guru-digital-media/silverstripe-jquery/",
   "keywords": [
     "silverstripe",
