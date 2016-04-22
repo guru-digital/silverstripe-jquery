@@ -8,20 +8,11 @@ class JqueryControllerExtension extends Extension
 
     public function onBeforeInit()
     {
-        if (
-            !$this->isCMS() || $this->isAuthentication()
-        ) {
+
+        $isCMS         = (bool) is_subclass_of($this->owner, "LeftAndMain");
+        $isAjax        = Director::is_ajax();
+        if (!$isCMS && !$isAjax) {
             SilverStripeJquery::requireJquery();
         }
-    }
-
-    public function isCMS()
-    {
-        return is_subclass_of($this->owner, "LeftAndMain");
-    }
-
-    public function isAuthentication()
-    {
-        return $this->owner->getRequest()->param("Controller") != "Security" || in_array($this->owner->getRequest()->param("Action"), array("login", "logout"));
     }
 }
