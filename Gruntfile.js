@@ -3,39 +3,24 @@ module.exports = function (grunt) {
     grunt.initConfig({
         // Import package manifest
         pkg: grunt.file.readJSON("package.json"),
-        copy: {
-            main: {
-                expand: false,
-                files: [
-                    {
-                        src: "bower_components/jquery/dist/jquery.js",
-                        dest: "thirdparty/jquery/jquery.js"
-                    },
-                    {
-                        src: "bower_components/jquery-migrate/index.js",
-                        dest: "thirdparty/jquery-migrate/jquery-migrate.js"
-                    }
-                ]
-            }
-        },
-        concat: {
-            options: {
-                footer: 'jQuery.migrateMute = true;'
-            },
-            dist: {
-                src: ['thirdparty/jquery/jquery.js'],
-                dest: 'thirdparty/jquery/jquery.js'
+        // Banner definitions
+        bower: {
+            dev: {
+                dest: 'thirdparty/',
+                options: {
+                    stripAffix: true,
+                    expand: true,
+                    keepExpandedHierarchy: false
+                }
             }
         },
         uglify: {
             jquery: {
                 options: {
-                    sourceMap: true,
-                    preserveComments: "some"
+                    sourceMap: true
                 },
                 files: {
-                    'thirdparty/jquery/jquery.min.js': ['thirdparty/jquery/jquery.js'],
-                    'thirdparty/jquery-migrate/jquery-migrate.min.js': ['thirdparty/jquery-migrate/jquery-migrate.js']
+                    'thirdparty/jquery/jquery.min.js': ['thirdparty/jquery/jquery.js']
                 }
             }
         },
@@ -81,5 +66,5 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.registerTask("default", ["bower_install", "copy", "concat", "uglify"]);
+    grunt.registerTask("default", ["bower_install", "bower", "uglify"]);
 };
