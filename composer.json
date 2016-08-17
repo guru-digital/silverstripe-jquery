@@ -1,9 +1,8 @@
 {
 	"name": "gdmedia/silverstripe-jquery",
-	"description": "Use a newer version (2.2.3) of jQuery outside of the CMS and disable including framework jQuery",
-	"version": "2.2.3",
+	"description": "Use a newer version (1.12.4) of jQuery outside of the CMS and disable including framework jQuery",
 	"license": "BSD-3-Clause",
-	"homepage": "https://git2.gdmedia.tv/guru-digital-media/silverstripe-jquery/",
+	"homepage": "https://github.com/guru-digital/silverstripe-jquery",
 	"keywords": [
 		"silverstripe",
 		"jquery"
@@ -20,8 +19,7 @@
 	},
 	"type": "silverstripe-module",
 	"require": {
-		"silverstripe/cms": ">=3.0.1,<4.0",
-		"composer/installers": "*"
+		"silverstripe/framework": "~3"
 	},
 	"extra": {
 		"installer-name": "silverstripe-jquery"

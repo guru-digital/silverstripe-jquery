@@ -1,9 +1,8 @@
 {
 	"name": "silverstripe-jquery",
-	"description": "Use a newer version (2.2.3) of jQuery outside of the CMS and disable including framework jQuery",
-	"version": "2.2.3",
+	"description": "Use a newer version (1.12.4) of jQuery outside of the CMS and disable including framework jQuery",
 	"license": "BSD-3-Clause",
-	"homepage": "https://git2.gdmedia.tv/guru-digital-media/silverstripe-jquery/",
+	"homepage": "https://github.com/guru-digital/silverstripe-jquery",
 	"keywords": [
 		"silverstripe",
 		"jquery"
@@ -26,6 +25,7 @@
 		"tests"
 	],
 	"dependencies": {
-		"jquery": "2.2.3"
+		"jquery": "1.12.4",
+		"jquery-migrate": "http://code.jquery.com/jquery-migrate-1.4.1.js"
 	}
 }
