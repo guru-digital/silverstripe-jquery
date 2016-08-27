@@ -19,7 +19,7 @@
 	},
 	"type": "silverstripe-module",
 	"require": {
-		"silverstripe/framework": "~3"
+		"silverstripe/framework": "*"
 	},
 	"extra": {
 		"installer-name": "silverstripe-jquery"
