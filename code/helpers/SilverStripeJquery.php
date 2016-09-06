@@ -79,6 +79,7 @@ class SilverStripeJquery
         $jsMin = (Director::isDev()) ? "" : ".min";
         return array(
             SS_JQUERY_DIR."/thirdparty/jquery/jquery".$jsMin.".js",
+            SS_JQUERY_DIR."/thirdparty/jquery-migrate/jquery-migrate".$jsMin.".js"
         );
     }
 
